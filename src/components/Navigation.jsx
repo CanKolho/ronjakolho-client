@@ -65,14 +65,7 @@ const Navigation = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', fontFamily: 'CalligraphyFont', color: 'black' } }}
-          >
-            Ronja Kolho
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block', overflowX: 'hidden' } }}>
+            <Box sx={{ display: { xs: 'none', sm: 'flex'}, justifyContent: 'center', flexGrow: 1 }}>
             {navItems.map((item) => (
               <Link key={item} to={item.toLowerCase() === 'home' ? '/' : item.toLowerCase()} style={{ textDecoration: 'none', color: 'black' }}>
                 <Button sx={{ color: 'black' }}>

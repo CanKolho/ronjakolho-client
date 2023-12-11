@@ -1,37 +1,42 @@
-import '../styles/Footer.css';
+import '../styles/Footer.css'
+import { Link } from 'react-router-dom'
 
-const Footer = () => {
+const Footer2 = () => {
+  const socials = [
+    { name: 'facebook', icon: 'fa-brands fa-facebook' },
+    { name: 'twitter', icon: 'fa-brands fa-twitter' },
+    { name: 'linkedin', icon: 'fa-brands fa-linkedin' },
+    { name: 'instagram', icon: 'fa-brands fa-instagram' }
+  ]
+
+  const links = ['Home', 'About', 'Contact']
+
   return (
-    <section className="footer-section">
-      <footer className="top">
-        <div className="links">
-          {footerItems.map((item, index) => (
-            <div className="links-column" key={index}>
-              <h2>{item.title}</h2>
-              {item.links.map((link, linkIndex) => (
-                <a key={linkIndex}>{link}</a>
-              ))}
-            </div>
-          ))}
-        </div>
-      </footer>
-      <footer className="bottom">
-        <p className="copyright">{footerItems[3].title}</p>
-        <div className="legal">
-          {footerItems[3].links.map((link, linkIndex) => (
-            <a key={linkIndex}>{link}</a>
-          ))}
-        </div>
-      </footer>
-    </section>
-  );
-};
+    <footer>
+      <ul className="socials">
+        {socials.map((social, index) => (
+          <li key={index}>
+            <a href='#'>
+              <i className={social.icon}></i>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <ul className="links">
+        {links.map((link, index) => (
+          <li key={index}>
+            <Link 
+              key={link} 
+              to={link.toLowerCase() === 'home' ? '/' : link.toLowerCase()}
+            >
+              {link}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <p className="legal">© {new Date().getFullYear()} All rights reserved</p>
+    </footer>
+  )
+}
 
-export default Footer;
-
-const footerItems = [
-  { title: "Useful links", links: ["Home", "About"] },
-  { title: "Resources", links: ["Contact me"] },
-  { title: "Social Media", links: ["Follow us on social media to find out the latest updates on our progress."] },
-  { title: `© ${new Date().getFullYear()} All rights reserved`, links: ["License", "Terms", "Privacy"] }
-]
+export default Footer2

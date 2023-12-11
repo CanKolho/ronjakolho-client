@@ -82,7 +82,7 @@ const ContactForm = () => {
               }}
             >
               Send 
-              <SendIcon fontSize="small" sx={{ ml: 1 }} />
+              <SendIcon fontSize="small" sx={{ ml: 1, verticalAlign: 'middle' }} />
             </Button>
           </form>
         </Box>
