@@ -1,0 +1,22 @@
+.contactform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+  background: transparent;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px); 
+}
+
+.contactform form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
