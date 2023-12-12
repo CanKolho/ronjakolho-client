@@ -1,0 +1,15 @@
+.aboutPic {
+  width: 30vw;
+  border-radius: 2%;
+  transition: all 350ms ease;
+}
+
+.aboutPic:hover {
+  filter: opacity(.9);
+}
+
+@media (max-width: 1100px) {
+  .aboutPic {
+    width: 90vw;
+  }
+}

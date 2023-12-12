@@ -13,8 +13,12 @@ footer ul {
 .socials li a i {
   color: black;
   font-size: 1.3rem;
+  transition: opacity .2s ease-in-out;
 }
 
+.socials li a i:hover {
+  opacity: .7;
+}
 .links li a {
   color: black;
   text-decoration: none;

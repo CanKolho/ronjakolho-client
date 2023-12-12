@@ -35,6 +35,9 @@ const Footer2 = () => {
         ))}
       </ul>
       <p className="legal">© {new Date().getFullYear()} All rights reserved</p>
+      <p className="legal">
+        Website created by <a href='https://cankolho.github.io/CanKolho-Portfolio/'>Can Kolho</a> 
+      </p>
     </footer>
   )
 }
