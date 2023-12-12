@@ -31,6 +31,7 @@ const About = () => {
           backgroundColor: '#fafafa',
           padding: '1rem',
           borderRadius: '10px',
+          width: isMobile ? '85vw' : '50%',
         }}> 
         <Typography variant="h5" sx={{ my: 2}}>
           Ronja Kolho
