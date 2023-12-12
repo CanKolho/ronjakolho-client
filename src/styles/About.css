@@ -4,6 +4,13 @@
   transition: all 350ms ease;
 }
 
+.socials {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .aboutPic:hover {
   filter: opacity(.9);
 }
