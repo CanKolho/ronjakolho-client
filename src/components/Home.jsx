@@ -12,7 +12,7 @@ const Home = () => {
     <Typography variant="h5" align="center" mb={2} mt={1}>
       Portfolio
     </Typography>
-    <Divider sx={{ marginLeft: '4rem', marginRight: '4rem', marginTop: 15, marginBottom: 10}} />
+    <Divider sx={{ mx: '4rem', mt: 15, mb: 10 }} />
     <ImageGallery />
     <Footer />
     </>

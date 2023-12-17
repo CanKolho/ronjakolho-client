@@ -18,7 +18,7 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom'
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About','Contact'];
+const navItems = ['Home', 'About', 'References','Contact'];
 
 const Navigation = (props) => {
   console.log('navbar props', props)
@@ -37,7 +37,7 @@ const Navigation = (props) => {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <Link key={item} to={item.toLowerCase() === 'home' ? '/' : item.toLowerCase()} style={{ textDecoration: 'none', color: 'black' }}>
+          <Link key={item} to={item.toLowerCase() === 'home' ? 'ronjakolhoportfolio/' : `ronjakolhoportfolio/${item.toLowerCase()}`} style={{ textDecoration: 'none', color: 'black' }}>
             <ListItem key={item} disablePadding>
               <ListItemButton sx={{ textAlign: 'center' }}>
                 <ListItemText primary={item} />
@@ -67,7 +67,7 @@ const Navigation = (props) => {
           </IconButton>
             <Box sx={{ display: { xs: 'none', sm: 'flex'}, justifyContent: 'center', flexGrow: 1 }}>
             {navItems.map((item) => (
-              <Link key={item} to={item.toLowerCase() === 'home' ? '/' : item.toLowerCase()} style={{ textDecoration: 'none', color: 'black' }}>
+              <Link key={item} to={item.toLowerCase() === 'home' ? 'ronjakolhoportfolio/' : `ronjakolhoportfolio/${item.toLowerCase()}`} style={{ textDecoration: 'none', color: 'black' }}>
                 <Button sx={{ color: 'black' }}>
                   {item}
                 </Button>
