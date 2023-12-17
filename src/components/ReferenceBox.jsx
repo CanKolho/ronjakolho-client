@@ -40,11 +40,11 @@ const ReferencesBox = ({ reference }) => {
       '&:hover': {
         cursor: 'pointer',
         '& .before-image': {
-          transform: 'translateX(16%) translateY(-20%) scale(.9)',
+          transform: 'translateX(16%) translateY(-20%) scale(.9) rotate(8deg)',
           //transform: 'translateY(-22%) scale(.92)',
         },
         '& .after-image': {
-          transform: 'translateX(10%) translateY(-12%) scale(.92)',
+          transform: 'translateX(10%) translateY(-12%) scale(.92) rotate(5deg)',
          //transform: 'translateY(-14%) scale(.95)',
         },
       },
