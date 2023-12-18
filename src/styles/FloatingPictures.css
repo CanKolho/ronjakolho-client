@@ -20,7 +20,7 @@
 .pictures div {
   position: absolute;
   display: block;
-  padding: .2em;
+  padding: .1em;
   background-color: rgb(231, 231, 231);
   border: 1px solid rgb(196, 195, 195);
   bottom: -150px;

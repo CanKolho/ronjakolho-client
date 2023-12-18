@@ -54,7 +54,7 @@ const Navigation = (props) => {
   return (
     <Box sx={{ display: 'flex', overflowX: 'hidden' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: '#fce4ec' }}>
+      <AppBar component="nav" sx={{ backgroundColor: 'rgba(248, 240, 229, 0.8)', backdropFilter: 'blur(200px)' }}>
         <Toolbar>
           <IconButton
             color="inherit"

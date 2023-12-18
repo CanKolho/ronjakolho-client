@@ -75,9 +75,9 @@ const ContactForm = () => {
                 mt: 2,
                 display: "block",
                 margin: "0 auto",
-                backgroundColor: '#c2185b',
+                backgroundColor: '#DED0B6',
                 "&:hover": {
-                  backgroundColor: '#880e4f',
+                  backgroundColor: '#BBAB8C',
                 },
               }}
             >
