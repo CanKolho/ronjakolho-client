@@ -4,9 +4,11 @@ import About from "./components/About"
 import References from "./components/References"
 import ContactForm from "./components/ContactForm"
 import { Routes, Route } from 'react-router-dom'
+import { useScrollToTop } from "./hooks/index"
 import '@fontsource/roboto/300.css';
 
 const App = () => {
+  useScrollToTop()
 
   return (
     <>
