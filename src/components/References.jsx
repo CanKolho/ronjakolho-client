@@ -4,10 +4,7 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import { useMediaQuery } from '@mui/material';
 import ReferencesBox from './ReferenceBox';
-import img1 from '/img1.png.webp'
-import img2 from '/img2.jpg.webp'
-import img3 from '/img3.png.webp'
-import img4 from '/img4.png.webp'
+import { portfolio } from '../portfolio.js'
 
 const References = () => {
   const isMobile = useMediaQuery('(max-width: 900px)')
@@ -33,7 +30,7 @@ const References = () => {
         gap: '5rem',
         mx: isMobile ? 5 : 10,
         }}>
-        {references.map((reference, index) => (
+        {portfolio.map((reference, index) => (
           <ReferencesBox key={index} reference={reference} />
         ))}  
       </Box>
@@ -42,139 +39,3 @@ const References = () => {
 }
 
 export default References
-
-const references = [
-  {
-    title: 'Firma',
-    description: 'Lorem ipsum dolor sit amet',
-    images: [
-      {
-        src: img2,
-        alt: 'reference 1'
-      },
-      {
-        src: img3,
-        alt: 'reference 2'
-      },
-      {
-        src: img4,
-        alt: 'reference 3'
-      },
-      {
-        src: img1,
-        alt: 'reference 4'
-      }
-    ]
-  },
-  {
-    title: 'Firma',
-    description: 'Lorem ipsum dolor sit amet',
-    images: [
-      {
-        src: img3,
-        alt: 'reference 1'
-      },
-      {
-        src: img4,
-        alt: 'reference 2'
-      },
-      {
-        src: img1,
-        alt: 'reference 3'
-      },
-      {
-        src: img2,
-        alt: 'reference 4'
-      }
-    ]
-  },
-  {
-    title: 'Firma',
-    description: 'Lorem ipsum dolor sit amet.',
-    images: [
-      {
-        src: img1,
-        alt: 'reference 1'
-      },
-      {
-        src: img4,
-        alt: 'reference 2'
-      },
-      {
-        src: img2,
-        alt: 'reference 3'
-      },
-      {
-        src: img3,
-        alt: 'reference 4'
-      }
-    ]
-  },
-  {
-    title: 'Weddings',
-    description: 'Lorem ipsum dolor sit amet.',
-    images: [
-      {
-        src: img2,
-        alt: 'reference 1'
-      },
-      {
-        src: img1,
-        alt: 'reference 2'
-      },
-      {
-        src: img3,
-        alt: 'reference 3'
-      },
-      {
-        src: img4,
-        alt: 'reference 4'
-      }
-    ]
-  },
-  {
-    title: 'Ocean',
-    description: 'Lorem ipsum dolor sit amet.',
-    images: [
-      {
-        src: img4,
-        alt: 'reference 1'
-      },
-      {
-        src: img3,
-        alt: 'reference 2'
-      },
-      {
-        src: img1,
-        alt: 'reference 3'
-      },
-      {
-        src: img2,
-        alt: 'reference 4'
-      }
-    ]
-  },
-  {
-    title: 'Nature',
-    description: 'Lorem ipsum dolor sit amet.',
-    images: [
-      {
-        src: img3,
-        alt: 'reference 1'
-      },
-      {
-        src: img2,
-        alt: 'reference 2'
-      },
-      {
-        src: img1,
-        alt: 'reference 3'
-      },
-      {
-        src: img4,
-        alt: 'reference 4'
-      }
-    ]
-  },
-
-]

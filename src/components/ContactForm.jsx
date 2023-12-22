@@ -1,7 +1,9 @@
 import '../styles/ContactForm.css';
+import { useState } from 'react';
 import { useField } from '../hooks';
 import { TextField, Button, Typography, Box } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
+import Alert from '@mui/material/Alert';
 import FloatingPictures from './FloatingPictures';
 
 const ContactForm = () => {
@@ -9,12 +11,20 @@ const ContactForm = () => {
   const { reset: resetEmail, ...email } = useField('email')
   const { reset: resetMessage, ...message } = useField('text')
 
+  const [success, setSuccess] = useState(false)
+
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    setSuccess(true)
 
     resetName()
     resetEmail()
     resetMessage()
+
+    setTimeout(() => {
+      setSuccess(false)
+    } , 7000)
   }
 
   return (
@@ -25,8 +35,6 @@ const ContactForm = () => {
           alignItems: "center",
           justifyContent: "center",
           height: "100vh",
-          overflowX: 'hidden',
-          
         }}
       >
         <Box
@@ -43,6 +51,11 @@ const ContactForm = () => {
           <Typography variant="h4" align="center" mb={2}>
             Contact Me
           </Typography>
+
+          { success && <Alert severity="success">
+           We have received your message and will get back to you soon!
+          </Alert>}
+
           <form onSubmit={handleSubmit}>
             <TextField
               {...name}
