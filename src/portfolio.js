@@ -1,7 +1,4 @@
-import img1 from '/img1.png.webp'
-import img2 from '/img2.jpg.webp'
-import img3 from '/img3.png.webp'
-import img4 from '/img4.png.webp'
+import img from './assets/me.jpeg'
 
 export const portfolio = [
   {
@@ -10,19 +7,19 @@ export const portfolio = [
     description: 'Lorem ipsum dolor sit amet',
     images: [
       {
-        src: img2,
+        src: img, 
         alt: 'reference 1'
       },
       {
-        src: img3,
+        src: img,
         alt: 'reference 2'
       },
       {
-        src: img4,
+        src: img,
         alt: 'reference 3'
       },
       {
-        src: img1,
+        src: img,
         alt: 'reference 4'
       }
     ]
@@ -33,19 +30,19 @@ export const portfolio = [
     description: 'Lorem ipsum dolor sit amet',
     images: [
       {
-        src: img3,
+        src: img,
         alt: 'reference 1'
       },
       {
-        src: img4,
+        src: img,
         alt: 'reference 2'
       },
       {
-        src: img1,
+        src: img,
         alt: 'reference 3'
       },
       {
-        src: img2,
+        src: img,
         alt: 'reference 4'
       }
     ]
@@ -56,19 +53,19 @@ export const portfolio = [
     description: 'Lorem ipsum dolor sit amet.',
     images: [
       {
-        src: img1,
+        src: img,
         alt: 'reference 1'
       },
       {
-        src: img4,
+        src: img,
         alt: 'reference 2'
       },
       {
-        src: img2,
+        src: img,
         alt: 'reference 3'
       },
       {
-        src: img3,
+        src: img,
         alt: 'reference 4'
       }
     ]
@@ -79,19 +76,19 @@ export const portfolio = [
     description: 'Lorem ipsum dolor sit amet.',
     images: [
       {
-        src: img2,
+        src: img,
         alt: 'reference 1'
       },
       {
-        src: img1,
+        src: img,
         alt: 'reference 2'
       },
       {
-        src: img3,
+        src: img,
         alt: 'reference 3'
       },
       {
-        src: img4,
+        src: img,
         alt: 'reference 4'
       }
     ]
@@ -102,19 +99,19 @@ export const portfolio = [
     description: 'Lorem ipsum dolor sit amet.',
     images: [
       {
-        src: img4,
+        src: img,
         alt: 'reference 1'
       },
       {
-        src: img3,
+        src: img,
         alt: 'reference 2'
       },
       {
-        src: img1,
+        src: img,
         alt: 'reference 3'
       },
       {
-        src: img2,
+        src: img,
         alt: 'reference 4'
       }
     ]
@@ -125,19 +122,19 @@ export const portfolio = [
     description: 'Lorem ipsum dolor sit amet.',
     images: [
       {
-        src: img3,
+        src: img,
         alt: 'reference 1'
       },
       {
-        src: img2,
+        src: img,
         alt: 'reference 2'
       },
       {
-        src: img1,
+        src: img,
         alt: 'reference 3'
       },
       {
-        src: img4,
+        src: img,
         alt: 'reference 4'
       }
     ]

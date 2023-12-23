@@ -17,8 +17,7 @@ const ReferencesBox = ({ reference }) => {
     width: isMobile ? '60vw' : '15vw', 
     backgroundColor: 'rgb(231, 231, 231)', 
     padding: '.15em', 
-    border: '1px solid rgb(196, 195, 195)', 
-    boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.05)',
+    border: '1px solid rgb(196, 195, 195)',
     position: 'relative', // Ensures the main image is positioned above the before/after images
     zIndex: 2, // Higher than before/after images
     transition: 'transform .5s ease-in-out', // For hover effect

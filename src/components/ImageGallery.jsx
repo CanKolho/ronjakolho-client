@@ -1,7 +1,4 @@
-import img1 from '/img1.png.webp'
-import img2 from '/img2.jpg.webp'
-import img3 from '/img3.png.webp'
-import img4 from '/img4.png.webp'
+import img from '../assets/me.jpeg'
 import '../styles/ImageGallery.css'
 
 const ImageGallery = () => {
@@ -25,26 +22,26 @@ export default ImageGallery;
 const data = [
     {
       id: 1,
-      imgSrc: img1
+      imgSrc: img
     },
     {
       id: 2,
-      imgSrc: img2
+      imgSrc: img
     },
     {
       id: 3,
-      imgSrc: img4
+      imgSrc: img
     },
     {
       id: 4,
-      imgSrc: img1
+      imgSrc: img
     },
     {
       id: 5,
-      imgSrc: img3
+      imgSrc: img
     },
     {
       id: 6,
-      imgSrc: img2
+      imgSrc: img
     },
 ];
