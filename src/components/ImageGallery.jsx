@@ -1,4 +1,9 @@
-import img from '../assets/me.jpeg'
+import img1 from '../assets/grilli.jpg'
+import img2 from '../assets/hannes.jpg'
+import img3 from '../assets/img2.jpg'
+import img4 from '../assets/img3.jpg'
+import img5 from '../assets/perhe.jpg'
+import img6 from '../assets/salzburg.jpg'
 import '../styles/ImageGallery.css'
 
 const ImageGallery = () => {
@@ -22,26 +27,26 @@ export default ImageGallery;
 const data = [
     {
       id: 1,
-      imgSrc: img
+      imgSrc: img1
     },
     {
       id: 2,
-      imgSrc: img
+      imgSrc: img2
     },
     {
       id: 3,
-      imgSrc: img
+      imgSrc: img3
     },
     {
       id: 4,
-      imgSrc: img
+      imgSrc: img4
     },
     {
       id: 5,
-      imgSrc: img
+      imgSrc: img5
     },
     {
       id: 6,
-      imgSrc: img
+      imgSrc: img6
     },
 ];

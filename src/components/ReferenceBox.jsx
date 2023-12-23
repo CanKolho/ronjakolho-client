@@ -14,7 +14,9 @@ const ReferencesBox = ({ reference }) => {
   };
 
   const imgStyle = { 
-    width: isMobile ? '60vw' : '15vw', 
+    width: isMobile ? '60vw' : '15vw',
+    aspectRatio: '1/1',
+    objectFit: 'cover',
     backgroundColor: 'rgb(231, 231, 231)', 
     padding: '.15em', 
     border: '1px solid rgb(196, 195, 195)',
@@ -56,8 +58,8 @@ const ReferencesBox = ({ reference }) => {
           <img src={reference.images[0].src} style={imgStyle} className='main-image' />
 
           {/* Before and After Images */}
-          <img src={reference.images[1].src} style={beforeAfterStyle} className="before-image" />
-          <img src={reference.images[2].src} style={beforeAfterStyle} className="after-image" />
+          <img src={reference.images[2].src} style={beforeAfterStyle} className="before-image" />
+          <img src={reference.images[1].src} style={beforeAfterStyle} className="after-image" />
         </Box>
         <Typography sx={{ fontSize: 20 }}>
           {reference.title}
