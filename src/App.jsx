@@ -12,7 +12,7 @@ import '@fontsource/roboto/300.css';
 const App = () => {
   useScrollToTop()
 
-  const match = useMatch('/ronjakolhoportfolio/reference/:id')
+  const match = useMatch('/reference/:id')
   const reference = match 
     ? portfolio.find(p => p.id === Number(match.params.id))
     : null
@@ -21,11 +21,11 @@ const App = () => {
     <>
       <Navigation />
       <Routes>
-        <Route path="ronjakolhoportfolio/" element={<Home />} />
-        <Route path="ronjakolhoportfolio/about" element={<About />} />
-        <Route path="ronjakolhoportfolio/references" element={<References />} />
-        <Route path='/ronjakolhoportfolio/reference/:id' element={<Reference reference={reference} />}/>
-        <Route path="ronjakolhoportfolio/contact" element={<ContactForm />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/references" element={<References />} />
+        <Route path='/reference/:id' element={<Reference reference={reference} />}/>
+        <Route path="/contact" element={<ContactForm />} />
       </Routes>
     </>
   )

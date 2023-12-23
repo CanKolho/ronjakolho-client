@@ -54,7 +54,7 @@ const Reference = ({ reference }) => {
           </Box>
         ))}
       </Box>
-      <Link to='/ronjakolhoportfolio/references' style={{ textDecoration: 'none', color: 'black' }}>
+      <Link to='/references' style={{ textDecoration: 'none', color: 'black' }}>
         <Typography variant='h6' sx={{ textAlign: 'center', mb: 5, '&:hover': { cursor: 'pointer' } }}>
           Back to all references
         </Typography>

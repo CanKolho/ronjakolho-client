@@ -27,7 +27,7 @@ const Footer2 = () => {
           <li key={index}>
             <Link 
               key={link} 
-              to={link.toLowerCase() === 'home' ? '/' : link.toLowerCase()}
+              to={link.toLowerCase() === 'home' ? '/' : `/${link.toLowerCase()}`}
             >
               {link}
             </Link>
