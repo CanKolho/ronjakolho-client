@@ -1,5 +1,6 @@
 import '../styles/Footer.css'
 import { Link } from 'react-router-dom'
+import { Motion } from './motion/Motion'
 
 const Footer2 = () => {
   const socials = [
@@ -16,28 +17,37 @@ const Footer2 = () => {
       <ul className="socials">
         {socials.map((social, index) => (
           <li key={index}>
-            <a href='#'>
-              <i className={social.icon}></i>
-            </a>
+            <Motion index={index}>
+              <a href='#'>
+                <i className={social.icon}></i>
+              </a>
+            </Motion>
           </li>
         ))}
       </ul>
       <ul className="links">
         {links.map((link, index) => (
           <li key={index}>
+            <Motion index={index}>
             <Link 
               key={link} 
               to={link.toLowerCase() === 'home' ? '/' : `/${link.toLowerCase()}`}
             >
               {link}
             </Link>
+            </Motion>
           </li>
         ))}
       </ul>
-      <p className="legal">© {new Date().getFullYear()} All rights reserved</p>
-      <p className="legal">
+      <Motion>
+        <p className="legal">© {new Date().getFullYear()} All rights reserved</p>
+      </Motion>
+      <Motion>
+        <p className="legal">
         Website created by <a href='https://cankolho.github.io/CanKolho-Portfolio/'>Can Kolho</a> 
       </p>
+      </Motion>
+      
     </footer>
   )
 }

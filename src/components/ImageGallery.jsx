@@ -6,15 +6,19 @@ import img5 from '../assets/perhe.jpg'
 import img6 from '../assets/salzburg.jpg'
 import '../styles/ImageGallery.css'
 
+import { MotionDown } from './motion/motionDown'
+
 const ImageGallery = () => {
   return (
     <>
     <div className='gallery'>
         {data.map((item, index) => {
           return (
-            <div className='pics' key={index} >
-              <img src={item.imgSrc} alt='random' style={{ width: '100%' }} />
-            </div>
+            <MotionDown key={item + index}>
+              <div className='pics' key={index} >
+                <img src={item.imgSrc} alt='random' style={{ width: '100%' }} />
+              </div>
+            </MotionDown>
           );
         })}
     </div>
