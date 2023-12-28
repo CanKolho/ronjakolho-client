@@ -6,19 +6,29 @@ import img5 from '../assets/perhe.jpg'
 import img6 from '../assets/salzburg.jpg'
 import '../styles/ImageGallery.css'
 
-import { MotionDown } from './motion/motionDown'
+import { useMediaQuery } from '@mui/material';
+import { Motion } from './motion/Motion'
 
 const ImageGallery = () => {
+  const isMobile = useMediaQuery('(max-width: 900px)')
+
   return (
     <>
     <div className='gallery'>
         {data.map((item, index) => {
           return (
-            <MotionDown key={item + index}>
-              <div className='pics' key={index} >
-                <img src={item.imgSrc} alt='random' style={{ width: '100%' }} />
-              </div>
-            </MotionDown>
+            <div className='pics' key={index} >
+              <Motion
+                index={ isMobile ? 0 : index}
+              >
+                <img 
+                  src={item.imgSrc} 
+                  alt={item.altText} 
+                  style={{ width: '100%' }}
+                  loading='lazy'
+                />
+              </Motion>
+            </div>
           );
         })}
     </div>
@@ -31,26 +41,32 @@ export default ImageGallery;
 const data = [
     {
       id: 1,
-      imgSrc: img1
+      imgSrc: img1,
+      altText: 'Image 1'
     },
     {
       id: 2,
-      imgSrc: img2
+      imgSrc: img2,
+      altText: 'Image 2'
     },
     {
       id: 3,
-      imgSrc: img3
+      imgSrc: img3,
+      altText: 'Image 3'
     },
     {
       id: 4,
-      imgSrc: img4
+      imgSrc: img4,
+      altText: 'Image 4'
     },
     {
       id: 5,
-      imgSrc: img5
+      imgSrc: img5,
+      altText: 'Image 5'
     },
     {
       id: 6,
-      imgSrc: img6
+      imgSrc: img6,
+      altText: 'Image 6'
     },
 ];

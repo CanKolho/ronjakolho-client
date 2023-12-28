@@ -17,56 +17,55 @@ const About = () => {
   const isMobile = useMediaQuery('(max-width: 1100px)');
 
   return (
-    <Motion>
+    <Motion direction='down'>
       <Box mt={20} mb={10}  sx={{
-      display: 'flex', 
-      justifyContent: 'space-evenly',
-      flexDirection: isMobile ? 'column' : 'row',
-      alignItems: 'center',
-      gap: isMobile ? '3rem' : '2rem',
-      mx: 5
-    }}>
-      <Motion>
-        <img className='aboutPic' src={img} alt="random" />
-      </Motion>
-      <Box sx={{ 
-          display: 'flex',
-          flexDirection: 'column', 
-          backgroundColor: '#fafafa',
-          padding: '1rem',
-          borderRadius: '10px',
-          width: isMobile ? '85vw' : '50%',
+          display: 'flex', 
+          justifyContent: 'space-evenly',
+          flexDirection: isMobile ? 'column' : 'row',
+          alignItems: 'center',
+          gap: isMobile ? '3rem' : '2rem',
+          mx: 5
         }}>
-          <Motion>
-            <Typography variant="h5" sx={{ my: 2}}>
-              Ronja Kolho
+
+        <img className='aboutPic' src={img} alt="me, Ronja" loading="lazy"/>
+
+        <Box sx={{ 
+            display: 'flex',
+            flexDirection: 'column', 
+            backgroundColor: '#fafafa',
+            padding: '1rem',
+            borderRadius: '10px',
+            width: isMobile ? '85vw' : '50%',
+          }}>
+            <Motion index={2} direction='down'>
+              <Typography variant="h5" sx={{ my: 2 }}>
+                Ronja Kolho
+              </Typography>
+            </Motion>
+          <Motion index={3} direction='down'>
+            <Typography mb={4} sx={{ fontSize: 17}}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              <br />
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Typography>
           </Motion>
-        <Motion>
-          <Typography mb={4} sx={{ fontSize: 17}}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          <br />
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </Typography>
-        </Motion>
-        
-        <Box>
-          <ul className="socials">
-          {socials.map((social, index) => (
-            <li key={index}>
-              <Motion index={index}>
-                <a href='#'>
-                  <i className={social.icon}></i>
-                </a>
-              </Motion>
-            </li>
-          ))}
-          </ul>
+          <Box>
+            <ul className="socials">
+            {socials.map((social, index) => (
+              <li key={index}>
+                <Motion index={index+2} direction='down'>
+                  <a href='#'>
+                    <i className={social.icon}></i>
+                  </a>
+                </Motion>
+              </li>
+            ))}
+            </ul>
+          </Box>
         </Box>
       </Box>
-    </Box>
     </Motion>
   );
 }

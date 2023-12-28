@@ -3,6 +3,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import { useMediaQuery } from '@mui/material';
+import { Motion } from './motion/Motion'
 import ReferencesBox from './ReferenceBox';
 import { portfolio } from '../portfolio.js'
 
@@ -17,10 +18,19 @@ const References = () => {
         justifyContent: 'center', 
         alignItems: 'center'
       }}>
+        
       <Typography variant='h3'>
-        References
+        <Motion direction='down'>
+          References
+        </Motion>
       </Typography>
-      <Divider sx={{ mx: '4rem', width: '75%'}} />
+
+      <Motion index={1} direction='down'>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Divider sx={{ mx: '4rem', width: '75vw'}} />
+        </Box>
+      </Motion>
+      
       <Box sx={{
         display: 'flex',
         justifyContent: 'center',
@@ -31,7 +41,13 @@ const References = () => {
         mx: isMobile ? 5 : 10,
         }}>
         {portfolio.map((reference, index) => (
-          <ReferencesBox key={index} reference={reference} />
+          <Motion 
+            key={index} 
+            index={isMobile ? 0 : index} 
+            direction={isMobile ? 'up' : index % 2 === 0 ? 'up' : 'down'}
+          >
+            <ReferencesBox key={index} reference={reference} />
+          </Motion>
         ))}  
       </Box>
     </Stack>

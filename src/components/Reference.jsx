@@ -3,6 +3,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import { useMediaQuery } from '@mui/material';
+import { Motion } from './motion/Motion'
 import { Link } from 'react-router-dom'
 
 
@@ -38,19 +39,27 @@ const Reference = ({ reference }) => {
         }}>
         {reference.images.map((image, index) => (
           <Box 
+            key={index}
             sx={{
               '&:hover': {
                 opacity: 0.9,
               },
               transition: 'opacity 0.3s ease',
             }}>
-            <img 
-              key={index} 
-              src={image.src} 
-              style={{ 
-                width: isMobile ? '80vw' : '20vw',
-              }}
-            />
+              <Motion 
+                key={index} 
+                index={isMobile ? 0 : index} 
+                direction={isMobile ? 'up' : index % 2 === 0 ? 'up' : 'down'}
+              >
+                <img 
+                  key={index} 
+                  src={image.src} 
+                  alt={image.alt}
+                  style={{ 
+                    width: isMobile ? '80vw' : '20vw',
+                  }}
+                />
+            </Motion>
           </Box>
         ))}
       </Box>

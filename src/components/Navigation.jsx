@@ -15,8 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-
-import { Motion } from './motion/motion'
+import { Motion } from './motion/Motion'
 import { Link } from 'react-router-dom'
 
 const drawerWidth = 240;
@@ -39,15 +38,15 @@ const Navigation = (props) => {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <Motion key={item}>
-            <Link key={item} to={item.toLowerCase() === 'home' ? '/' : `/${item.toLowerCase()}`} style={{ textDecoration: 'none', color: 'black' }}>
+          <Link key={item} to={item.toLowerCase() === 'home' ? '/' : `/${item.toLowerCase()}`} style={{ textDecoration: 'none', color: 'black' }}>
+            <Motion direction='down'>
               <ListItem key={item} disablePadding>
                 <ListItemButton sx={{ textAlign: 'center' }}>
                   <ListItemText primary={item} />
                 </ListItemButton>
               </ListItem>
-            </Link>
-          </Motion>
+            </Motion>
+          </Link>
         ))}
       </List>
     </Box>
@@ -67,17 +66,19 @@ const Navigation = (props) => {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' }, color: 'black' }}
           >
-            <MenuIcon />
+            <Motion direction='down'>
+              <MenuIcon />
+            </Motion>
           </IconButton>
             <Box sx={{ display: { xs: 'none', sm: 'flex'}, justifyContent: 'center', flexGrow: 1 }}>
             {navItems.map((item, index) => (
-              <Motion key={item} index={index}>
-                <Link key={item} to={item.toLowerCase() === 'home' ? '/' : `/${item.toLowerCase()}`} style={{ textDecoration: 'none', color: 'black' }}>
+              <Link key={item} to={item.toLowerCase() === 'home' ? '/' : `/${item.toLowerCase()}`} style={{ textDecoration: 'none', color: 'black' }}>
+                <Motion index={index} direction='down'>
                   <Button sx={{ color: 'black' }}>
                     {item}
-                  </Button>
-                </Link>
-              </Motion>
+                  </Button> 
+                </Motion>
+              </Link>
             ))}
           </Box>
         </Toolbar>

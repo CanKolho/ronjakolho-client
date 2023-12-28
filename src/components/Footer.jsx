@@ -17,7 +17,7 @@ const Footer2 = () => {
       <ul className="socials">
         {socials.map((social, index) => (
           <li key={index}>
-            <Motion index={index}>
+            <Motion index={index} direction='down'>
               <a href='#'>
                 <i className={social.icon}></i>
               </a>
@@ -28,13 +28,13 @@ const Footer2 = () => {
       <ul className="links">
         {links.map((link, index) => (
           <li key={index}>
-            <Motion index={index}>
-            <Link 
-              key={link} 
-              to={link.toLowerCase() === 'home' ? '/' : `/${link.toLowerCase()}`}
-            >
-              {link}
-            </Link>
+            <Motion index={index + 1} direction='down'>
+              <Link 
+                key={link} 
+                to={link.toLowerCase() === 'home' ? '/' : `/${link.toLowerCase()}`}
+              >
+                {link}
+              </Link>
             </Motion>
           </li>
         ))}
