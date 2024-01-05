@@ -1,7 +1,7 @@
 import { Box } from "@mui/material"
 import Typography from '@mui/material/Typography';
 import img from '../assets/me.jpeg'
-import '../styles/about.css'
+import '../styles/About.css'
 
 import Motion from './motion/motion.jsx'
 import { useMediaQuery } from '@mui/material';
