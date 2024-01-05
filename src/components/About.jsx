@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import img from '../assets/me.jpeg'
 import '../styles/about.css'
 
-import Motion from './motion/Motion.jsx'
+import Motion from './motion/motion.jsx'
 import { useMediaQuery } from '@mui/material';
 
 const About = () => {

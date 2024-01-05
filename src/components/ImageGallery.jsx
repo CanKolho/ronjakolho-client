@@ -7,7 +7,7 @@ import img6 from '../assets/salzburg.jpg'
 import '../styles/ImageGallery.css'
 
 import { useMediaQuery } from '@mui/material';
-import Motion from './motion/Motion.jsx'
+import Motion from './motion/motion.jsx'
 
 const ImageGallery = () => {
   const isMobile = useMediaQuery('(max-width: 900px)')

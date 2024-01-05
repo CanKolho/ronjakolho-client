@@ -15,7 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-import Motion from './motion/Motion.jsx'
+import Motion from './motion/motion.jsx'
 import { Link } from 'react-router-dom'
 
 const drawerWidth = 240;
