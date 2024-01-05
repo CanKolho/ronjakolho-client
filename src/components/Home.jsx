@@ -3,7 +3,7 @@ import Footer from './Footer'
 import Typography from '@mui/material/Typography';
 import { Divider } from '@mui/material'
 import Box from '@mui/material/Box';
-import { Motion } from './motion/Motion'
+import Motion from './motion/Motion'
 
 const Home = () => { 
   return (

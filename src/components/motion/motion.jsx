@@ -6,7 +6,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
  * @param {Object} props - The component props.
  * @returns {JSX.Element} - The rendered component.
  */
-export const Motion = ({ children, index = 0, direction = 'up' }) => {
+const Motion = ({ children, index = 0, direction = 'up' }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
@@ -44,3 +44,5 @@ export const Motion = ({ children, index = 0, direction = 'up' }) => {
     </div>
   );
 };
+
+export default Motion;
