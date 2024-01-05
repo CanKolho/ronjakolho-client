@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import { useMediaQuery } from '@mui/material';
-import Motion from './motion/Motion'
+import Motion from './motion/Motion.jsx'
 import { Link } from 'react-router-dom'
 
 

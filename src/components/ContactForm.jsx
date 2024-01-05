@@ -6,7 +6,7 @@ import SendIcon from '@mui/icons-material/Send';
 import Alert from '@mui/material/Alert';
 import FloatingPictures from './FloatingPictures';
 
-import Motion from './motion/Motion'
+import Motion from './motion/Motion.jsx'
 
 const ContactForm = () => {
   const { reset: resetName, ...name } = useField('text')
