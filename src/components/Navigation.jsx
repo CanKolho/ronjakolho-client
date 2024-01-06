@@ -22,7 +22,6 @@ const drawerWidth = 240;
 const navItems = ['Home', 'About', 'References','Contact'];
 
 const Navigation = (props) => {
-  console.log('navbar props', props)
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 

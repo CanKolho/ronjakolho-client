@@ -8,26 +8,43 @@ import FloatingPictures from './FloatingPictures';
 
 import Motion from './motion/motion.jsx'
 
+import emailService from '../services/email.js';
+
 const ContactForm = () => {
   const { reset: resetName, ...name } = useField('text')
   const { reset: resetEmail, ...email } = useField('email')
   const { reset: resetMessage, ...message } = useField('text')
 
   const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    setSuccess(true)
+    const emailObject = {
+      name: name.value,
+      email: email.value,
+      message: message.value
+    }
 
-    resetName()
-    resetEmail()
-    resetMessage()
+    try {
+      await emailService.sendEmail(emailObject)
+      
+      setSuccess(true)
+
+      resetName();
+      resetEmail();
+      resetMessage();
+    } catch (error) {
+      console.error('Failed to send email:', error)
+      setError(true);
+    }
 
     setTimeout(() => {
-      setSuccess(false)
-    } , 7000)
-  }
+        setSuccess(false);
+        setError(false);
+      }, 7000);
+  };
 
   return (
     <>
@@ -55,7 +72,11 @@ const ContactForm = () => {
             </Typography>
 
             { success && <Alert severity="success">
-            We have received your message and will get back to you soon!
+              We have received your message and will get back to you soon!
+            </Alert>}
+
+            { error && <Alert severity="error">
+              An error occurred while sending your message. Please try again.
             </Alert>}
 
             <form onSubmit={handleSubmit}>

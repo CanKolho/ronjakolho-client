@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import Navigation from "./components/Navigation"
 import Home from "./components/Home"
 import About from "./components/About"
@@ -9,8 +10,22 @@ import { useScrollToTop } from "./hooks/index"
 import { portfolio } from "./portfolio"
 import '@fontsource/roboto/300.css';
 
+import emailService from './services/email.js';
+
 const App = () => {
   useScrollToTop()
+
+  useEffect(() => {
+    /**
+     * Connects to the email service.
+     * @returns {Promise<void>} A promise that resolves when the connection is established.
+     */
+    const connectEmailService = async () => {
+      const connected = await emailService.connect();
+      console.log(connected);
+    }
+    connectEmailService();
+  }, []);
 
   const match = useMatch('/reference/:id')
   const reference = match 
