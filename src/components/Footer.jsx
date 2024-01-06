@@ -4,7 +4,6 @@ import Motion from './motion/motion.jsx'
 
 const Footer2 = () => {
   const socials = [
-    { name: 'facebook', icon: 'fa-brands fa-facebook', anchor: 'https://www.facebook.com/ronja.kolho' },
     { name: 'linkedin', icon: 'fa-brands fa-linkedin' , anchor: 'https://fi.linkedin.com/in/ronjakolho' },
     { name: 'instagram', icon: 'fa-brands fa-instagram', anchor: 'https://www.instagram.com/ronjajjulia?igsh=MTQxYmpweHFsNXh3bw== ' }
   ]

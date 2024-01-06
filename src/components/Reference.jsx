@@ -22,9 +22,6 @@ const Reference = ({ reference }) => {
         <Typography variant='h3'>
           {reference.title}
         </Typography>
-        <Typography variant='subtitle1'>
-          {reference.description}
-        </Typography>
         <Divider sx={{ mx: '4rem', width: '75%'}} />
       </Stack>
       <Box sx={{

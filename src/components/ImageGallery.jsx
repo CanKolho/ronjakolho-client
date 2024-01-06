@@ -1,9 +1,9 @@
-import img1 from '../assets/grilli.jpg'
-import img2 from '../assets/hannes.jpg'
-import img3 from '../assets/img2.jpg'
-import img4 from '../assets/img3.jpg'
-import img5 from '../assets/perhe.jpg'
-import img6 from '../assets/salzburg.jpg'
+import img1 from '../assets/weddings/IMG_9176.jpg'
+import img2 from '../assets/weddings/IMG_9326-2.jpg'
+import img3 from '../assets/drinks/moneypenny.jpg'
+import img4 from '../assets/weddings/IMG_9295.jpg'
+import img5 from '../assets/weddings/IMG_9352.jpg'
+import img6 from '../assets/drinks/mojito_1.jpg'
 import '../styles/ImageGallery.css'
 
 import { useMediaQuery } from '@mui/material';

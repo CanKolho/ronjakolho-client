@@ -8,7 +8,6 @@ import { useMediaQuery } from '@mui/material';
 
 const About = () => {
   const socials = [
-    { icon: 'fa-brands fa-facebook', anchor: 'https://www.facebook.com/ronja.kolho' },
     { icon: 'fa-brands fa-linkedin', anchor: 'https://fi.linkedin.com/in/ronjakolho' },
     { icon: 'fa-brands fa-instagram', anchor: 'https://www.instagram.com/ronjajjulia?igsh=MTQxYmpweHFsNXh3bw==' }
   ]
