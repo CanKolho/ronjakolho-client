@@ -19,7 +19,7 @@ import Motion from './motion/motion.jsx'
 import { Link } from 'react-router-dom'
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'References','Contact'];
+const navItems = ['Home', 'About', 'Portfolio','Contact'];
 
 const Navigation = (props) => {
   const { window } = props;

@@ -9,7 +9,7 @@ const Footer2 = () => {
     { name: 'instagram', icon: 'fa-brands fa-instagram', anchor: 'https://www.instagram.com/ronjajjulia?igsh=MTQxYmpweHFsNXh3bw== ' }
   ]
 
-  const links = ['Home', 'About', 'References', 'Contact']
+  const links = ['Home', 'About', 'Portfolio', 'Contact']
 
   return (
     <footer>

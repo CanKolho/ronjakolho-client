@@ -34,7 +34,7 @@ const ReferencesBox = ({ reference }) => {
   };
 
   return (
-    <Link to={`/reference/${reference.id}`} style={{ textDecoration: 'none', color: 'black' }}>
+    <Link to={`/portfolio/${reference.id}`} style={{ textDecoration: 'none', color: 'black' }}>
       <Stack spacing={1.5} sx={{
         display: 'flex',
         justifyContent: 'center',

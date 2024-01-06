@@ -27,7 +27,7 @@ const App = () => {
     connectEmailService();
   }, []);
 
-  const match = useMatch('/reference/:id')
+  const match = useMatch('/portfolio/:id')
   const reference = match 
     ? portfolio.find(p => p.id === Number(match.params.id))
     : null
@@ -38,8 +38,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/references" element={<References />} />
-        <Route path='/reference/:id' element={<Reference reference={reference} />}/>
+        <Route path="/portfolio" element={<References />} />
+        <Route path='/portfolio/:id' element={<Reference reference={reference} />}/>
         <Route path="/contact" element={<ContactForm />} />
       </Routes>
     </>

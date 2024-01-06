@@ -21,7 +21,7 @@ const References = () => {
         
       <Typography variant='h3'>
         <Motion direction='down'>
-          References
+          Portfolio
         </Motion>
       </Typography>
 
