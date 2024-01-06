@@ -4,10 +4,9 @@ import Motion from './motion/motion.jsx'
 
 const Footer2 = () => {
   const socials = [
-    { name: 'facebook', icon: 'fa-brands fa-facebook' },
-    { name: 'twitter', icon: 'fa-brands fa-twitter' },
-    { name: 'linkedin', icon: 'fa-brands fa-linkedin' },
-    { name: 'instagram', icon: 'fa-brands fa-instagram' }
+    { name: 'facebook', icon: 'fa-brands fa-facebook', anchor: 'https://www.facebook.com/ronja.kolho' },
+    { name: 'linkedin', icon: 'fa-brands fa-linkedin' , anchor: 'https://fi.linkedin.com/in/ronjakolho' },
+    { name: 'instagram', icon: 'fa-brands fa-instagram', anchor: 'https://www.instagram.com/ronjajjulia?igsh=MTQxYmpweHFsNXh3bw== ' }
   ]
 
   const links = ['Home', 'About', 'References', 'Contact']
@@ -18,7 +17,7 @@ const Footer2 = () => {
         {socials.map((social, index) => (
           <li key={index}>
             <Motion index={index} direction='down'>
-              <a href='#'>
+              <a href={social.anchor}>
                 <i className={social.icon}></i>
               </a>
             </Motion>

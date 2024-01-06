@@ -8,13 +8,12 @@ import { useMediaQuery } from '@mui/material';
 
 const About = () => {
   const socials = [
-    { icon: 'fa-brands fa-facebook' },
-    { icon: 'fa-brands fa-twitter' },
-    { icon: 'fa-brands fa-linkedin' },
-    { icon: 'fa-brands fa-instagram' }
+    { icon: 'fa-brands fa-facebook', anchor: 'https://www.facebook.com/ronja.kolho' },
+    { icon: 'fa-brands fa-linkedin', anchor: 'https://fi.linkedin.com/in/ronjakolho' },
+    { icon: 'fa-brands fa-instagram', anchor: 'https://www.instagram.com/ronjajjulia?igsh=MTQxYmpweHFsNXh3bw==' }
   ]
 
-  const isMobile = useMediaQuery('(max-width: 1100px)');
+    const isMobile = useMediaQuery('(max-width: 1100px)');
 
   return (
     <Motion direction='down'>
@@ -56,7 +55,7 @@ const About = () => {
             {socials.map((social, index) => (
               <li key={index}>
                 <Motion index={index+2} direction='down'>
-                  <a href='#'>
+                  <a href={social.anchor}>
                     <i className={social.icon}></i>
                   </a>
                 </Motion>
