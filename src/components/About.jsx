@@ -25,7 +25,7 @@ const About = () => {
           mx: 5
         }}>
 
-        <img className='aboutPic' src={img} alt="me, Ronja" loading="lazy"/>
+        <img className='aboutPic' src={img} alt="me, Ronja" />
 
         <Box sx={{ 
             display: 'flex',
@@ -37,7 +37,7 @@ const About = () => {
           }}>
             <Motion index={2} direction='down'>
               <Typography variant="h5" sx={{ my: 2 }}>
-                Ronja Kolho
+                About me
               </Typography>
             </Motion>
           <Motion index={3} direction='down'>

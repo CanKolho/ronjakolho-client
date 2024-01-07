@@ -6,6 +6,7 @@
   -moz-column-width: 33%;
   column-width: 33%;
   padding: 0 12px;
+  margin-top: 7rem;
 }
 
 .gallery .pics {
@@ -15,7 +16,7 @@
 }
 
 .gallery .pics:hover {
-  filter: opacity(.9);
+  filter: opacity(.95);
 }
 
 

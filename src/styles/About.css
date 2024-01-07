@@ -12,7 +12,7 @@
 }
 
 .aboutPic:hover {
-  filter: opacity(.9);
+  filter: opacity(.95);
 }
 
 @media (max-width: 1100px) {

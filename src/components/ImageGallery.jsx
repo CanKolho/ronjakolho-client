@@ -25,7 +25,6 @@ const ImageGallery = () => {
                   src={item.imgSrc} 
                   alt={item.altText} 
                   style={{ width: '100%' }}
-                  loading='lazy'
                 />
               </Motion>
             </div>
