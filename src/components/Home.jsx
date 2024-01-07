@@ -14,8 +14,8 @@ const Home = () => {
           variant={isMobile ? 'h3': 'h2'} 
           align="center" 
           fontWeight={700} 
-          mb={12} 
-          mt={20} >
+          mb={10} 
+          mt={15} >
             RONJA KOLHO
         </Typography>
       </Motion>
