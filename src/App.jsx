@@ -9,6 +9,7 @@ import { Routes, Route, useMatch } from 'react-router-dom'
 import { useScrollToTop } from "./hooks/index"
 import { portfolio } from "./portfolio"
 import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/700.css';
 
 import emailService from './services/email.js';
 

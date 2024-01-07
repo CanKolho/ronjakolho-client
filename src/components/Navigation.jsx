@@ -31,8 +31,8 @@ const Navigation = (props) => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2, fontFamily: 'CalligraphyFont', }}>
-        Ronjajjulia
+      <Typography variant="h6" fontWeight={700} sx={{ my: 2 }}>
+        RONJA KOLHO
       </Typography>
       <Divider />
       <List>
@@ -57,13 +57,13 @@ const Navigation = (props) => {
     <Box sx={{ display: 'flex', overflowX: 'hidden' }}>
       <CssBaseline />
       <AppBar component="nav" sx={{ backgroundColor: 'rgba(248, 240, 229, 0.8)', backdropFilter: 'blur(200px)' }}>
-        <Toolbar>
+        <Toolbar sx={{ display: 'flex', justifyContent:'center', alignItems: 'center' }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' }, color: 'black' }}
+            sx={{ display: { sm: 'none' }, color: 'black' }}
           >
             <Motion direction='down'>
               <MenuIcon />
