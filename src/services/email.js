@@ -1,5 +1,6 @@
 import axios from "axios";
-const baseUrl = import.meta.env.VITE_API_URL
+//const baseUrl = import.meta.env.VITE_API_URL
+const baseUrl = 'https://photographyportfolio.onrender.com/api/email'
 
 /**
  * Connects to the server.
