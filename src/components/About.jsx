@@ -1,5 +1,6 @@
 import { Box } from "@mui/material"
 import Typography from '@mui/material/Typography';
+import MyImage from './LazyLoad/MyImage.jsx'
 import img from '../assets/me.jpeg'
 import '../styles/About.css'
 
@@ -25,8 +26,13 @@ const About = () => {
           mx: 5
         }}>
 
-        <img className='aboutPic' src={img} alt="me, Ronja" />
-
+        <MyImage image={{ 
+            src: img, 
+            alt: 'me, Ronja', 
+            className: 'aboutPic' 
+            }} 
+        />
+        
         <Box sx={{ 
             display: 'flex',
             flexDirection: 'column', 

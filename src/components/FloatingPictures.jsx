@@ -5,18 +5,18 @@ import img3 from '../assets/drinks/moneypenny.jpg'
 import img4 from '../assets/weddings/IMG_9295.jpg'
 import img5 from '../assets/weddings/IMG_9352.jpg'
 import img6 from '../assets/drinks/maitai3.jpg'
+import img7 from '../assets/hannes.jpg'
+import img8 from '../assets/drinks/karibia_2.jpg'
 
-import { numberRange } from '../utils/helpers'
 
-const FloatingPictures = () => {
-  const images = [img1, img2, img3, img4, img5, img6]
-  const range = numberRange(0, 8)
-  
+const images = [img1, img2, img3, img4, img5, img6, img7, img8]
+
+const FloatingPictures = () => {  
   return (
     <div className="pictures">
-      {range.map((number) => (
-        <div key={number + images[number % images.length]}>
-          <img src={images[number % images.length]} alt="random" />
+      {images.map((image, index) => (
+        <div key={index}>
+          <img src={image} alt="random" />
         </div>
       ))}
     </div>

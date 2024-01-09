@@ -6,8 +6,11 @@ import { useMediaQuery } from '@mui/material';
 import Motion from './motion/motion.jsx'
 import { Link } from 'react-router-dom'
 
+import MyImage from './LazyLoad/MyImage';
+import { trackWindowScroll } from 'react-lazy-load-image-component';
 
-const Reference = ({ reference }) => {
+
+const Reference = ({ reference, scrollPosition }) => {
   const isMobile = useMediaQuery('(max-width: 900px)')
 
   return (
@@ -48,13 +51,13 @@ const Reference = ({ reference }) => {
                 index={isMobile ? 0 : index} 
                 direction={isMobile ? 'up' : index % 2 === 0 ? 'up' : 'down'}
               >
-                <img 
-                  key={index} 
-                  src={image.src} 
-                  alt={image.alt}
-                  style={{ 
-                    width: isMobile ? '80vw' : '20vw',
+                <MyImage 
+                  image={{
+                    src: image.src,
+                    alt: image.alt,
+                    style: { width: isMobile ? '80vw' : '20vw' }
                   }}
+                  scrollPosition={scrollPosition}
                 />
             </Motion>
           </Box>
@@ -69,4 +72,4 @@ const Reference = ({ reference }) => {
   )
 }
 
-export default Reference
+export default trackWindowScroll(Reference);

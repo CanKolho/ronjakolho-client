@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import { useMediaQuery } from '@mui/material';
 import { Link } from 'react-router-dom'
+import MyImage from './LazyLoad/MyImage';
 
 const ReferencesBox = ({ reference }) => {
   const isMobile = useMediaQuery('(max-width: 900px)');
@@ -55,11 +56,30 @@ const ReferencesBox = ({ reference }) => {
         }}>
         <Box sx={imgContainerStyle}>
           {/* Main Image */}
-          <img src={reference.images[0].src} alt="Main Image" style={imgStyle} className='main-image' />
+          <MyImage image={{ 
+            src: reference.images[0].src, 
+            alt: 'Main Image', 
+            style: imgStyle, 
+            className: 'main-image' 
+            }} 
+          />
 
           {/* Before and After Images */}
-          <img src={reference.images[2].src} alt="Before Image" style={beforeAfterStyle} className="before-image" />
-          <img src={reference.images[1].src} alt="After Image" style={beforeAfterStyle} className="after-image" />
+          <MyImage image={{ 
+            src: reference.images[2].src, 
+            alt: 'Before Image', 
+            style: beforeAfterStyle, 
+            className: 'before-image' 
+            }} 
+          />
+          <MyImage image={{ 
+            src: reference.images[1].src, 
+            alt: 'After Image', 
+            style: beforeAfterStyle, 
+            className: 'after-image' 
+            }} 
+          />
+          
         </Box>
         <Typography sx={{ fontSize: 20 }}>
           {reference.title}
