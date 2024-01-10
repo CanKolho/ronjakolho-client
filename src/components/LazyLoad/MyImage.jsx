@@ -24,7 +24,7 @@ const MyImage = ({ image, scrollPosition }) => {
       effect="opacity"
       //effect="blur"
 
-      placeholderSrc={image.placeholder}
+      //placeholderSrc={image.placeholder}
 
       scrollPosition={scrollPosition}
     />

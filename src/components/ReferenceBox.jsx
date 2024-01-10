@@ -16,14 +16,23 @@ const ReferencesBox = ({ reference }) => {
   };
 
   const imgStyle = { 
-    width: '250px',
+    width: isMobile ? '60vw' : '15vw',
     aspectRatio: '1/1',
     objectFit: 'cover',
     backgroundColor: 'rgb(231, 231, 231)', 
     padding: '.15em', 
     border: '1px solid rgb(196, 195, 195)',
+    position: 'relative', // Ensures the main image is positioned above the before/after images
+    zIndex: 2, // Higher than before/after images
     transition: 'transform .5s ease-in-out', // For hover effect
+  };
+
+  const beforeAfterStyle = {
+    ...imgStyle,
     position: 'absolute',
+    top: 0, // Aligns with the top of the container
+    left: 0, // Aligns with the left of the container
+    zIndex: 1, // Below the main image
   };
 
   return (
@@ -46,46 +55,40 @@ const ReferencesBox = ({ reference }) => {
           },
         },
         }}>
+        <Box sx={imgContainerStyle}>
+          {/* Main Image */}
+          <MyImage image={{ 
+            src: reference.images[0].src,
+            //placeholder: reference.images[0].placeholder,
+            alt: 'Main Image', 
+            style: imgStyle, 
+            className: 'main-image' 
+            }} 
+          />
 
-      
-          <Box sx={imgContainerStyle}>
-            {/* Before and After Images */}
-            <MyImage image={{ 
-              src: reference.images[2].src,
-              placeholderSrc: reference.images[2].placeholderSrc, 
-              alt: 'Before Image', 
-              style: imgStyle, 
-              className: 'before-image' 
-              }}
-
-            />
-            <MyImage image={{ 
-              src: reference.images[1].src,
-              placeholderSrc: reference.images[1].placeholderSrc,
-              alt: 'After Image', 
-              style: imgStyle, 
-              className: 'after-image' 
-              }} 
-            />
-            
-            {/* Main Image */}
-            <MyImage image={{ 
-              src: reference.images[0].src,
-              placeholderSrc: reference.images[0].placeholderSrc, 
-              alt: 'Main Image', 
-              style: imgStyle, 
-              className: 'main-image' 
-              }} 
-            />
+          {/* Before and After Images */}
+          <MyImage image={{ 
+            src: reference.images[2].src,
+            //placeholder: reference.images[2].placeholder, 
+            alt: 'Before Image', 
+            style: beforeAfterStyle, 
+            className: 'before-image' 
+            }} 
+          />
+          <MyImage image={{ 
+            src: reference.images[1].src,
+            //placeholder: reference.images[1].placeholder, 
+            alt: 'After Image', 
+            style: beforeAfterStyle, 
+            className: 'after-image' 
+            }} 
+          />
+          
         </Box>
-
-        <Box>
-          <Typography sx={{ fontSize: 20 }}>
-            {reference.title}
-          </Typography>
-          <Divider sx={{ width: '100%' }} />
-        </Box>
-
+        <Typography sx={{ fontSize: 20 }}>
+          {reference.title}
+        </Typography>
+        <Divider sx={{ width: '80%' }} />
       </Stack>
     </Link>
   )
