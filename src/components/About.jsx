@@ -26,12 +26,15 @@ const About = () => {
           mx: 5
         }}>
 
-        <MyImage image={{ 
-            src: img, 
-            alt: 'me, Ronja', 
-            className: 'aboutPic' 
+        <Box>
+            <MyImage image={{ 
+              src: img, 
+              alt: 'me, Ronja', 
+              className: 'aboutPic',
             }} 
-        />
+          />
+        </Box>
+        
         
         <Box sx={{ 
             display: 'flex',

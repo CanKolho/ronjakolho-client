@@ -1,6 +1,6 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import CircularLoading from '../loading/CircularLoading';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 /**
  * Renders an image component with lazy loading.
@@ -13,18 +13,20 @@ import CircularLoading from '../loading/CircularLoading';
  * @param {string} image.className - The CSS class name for the image.
  * @returns {JSX.Element} The rendered image component.
  */
-const MyImage = ({ image, scrollPosition }) => (
-    <LazyLoadImage
+const MyImage = ({ image, scrollPosition }) => {
+  return (
+      <LazyLoadImage
       src={image.src}
       alt={image.alt}
       style={image.style}
       className={image.className}
       effect="blur"
 
-      placeholder={<CircularLoading />}
+      placeholderSrc={image.placeholder}
 
       scrollPosition={scrollPosition}
     />
-);
+  )
+};
 
 export default MyImage;

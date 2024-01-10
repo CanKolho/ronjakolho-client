@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -15,23 +16,14 @@ const ReferencesBox = ({ reference }) => {
   };
 
   const imgStyle = { 
-    width: isMobile ? '60vw' : '15vw',
+    width: '250px',
     aspectRatio: '1/1',
     objectFit: 'cover',
     backgroundColor: 'rgb(231, 231, 231)', 
     padding: '.15em', 
     border: '1px solid rgb(196, 195, 195)',
-    position: 'relative', // Ensures the main image is positioned above the before/after images
-    zIndex: 2, // Higher than before/after images
     transition: 'transform .5s ease-in-out', // For hover effect
-  };
-
-  const beforeAfterStyle = {
-    ...imgStyle,
     position: 'absolute',
-    top: 0, // Aligns with the top of the container
-    left: 0, // Aligns with the left of the container
-    zIndex: 1, // Below the main image
   };
 
   return (
@@ -54,40 +46,43 @@ const ReferencesBox = ({ reference }) => {
           },
         },
         }}>
-        <Box sx={imgContainerStyle}>
-          {/* Main Image */}
-          <MyImage image={{ 
-            src: reference.images[0].src, 
-            alt: 'Main Image', 
-            style: imgStyle, 
-            className: 'main-image' 
-            }} 
-          />
 
-          {/* Before and After Images */}
-          <MyImage image={{ 
-            src: reference.images[2].src, 
-            alt: 'Before Image', 
-            style: beforeAfterStyle, 
-            className: 'before-image' 
-            }} 
-          />
-          <MyImage image={{ 
-            src: reference.images[1].src, 
-            alt: 'After Image', 
-            style: beforeAfterStyle, 
-            className: 'after-image' 
-            }} 
-          />
-          
+      
+          <Box sx={imgContainerStyle}>
+            {/* Before and After Images */}
+            <MyImage image={{ 
+              src: reference.images[2].src, 
+              alt: 'Before Image', 
+              style: imgStyle, 
+              className: 'before-image' 
+              }}
+
+            />
+            <MyImage image={{ 
+              src: reference.images[1].src, 
+              alt: 'After Image', 
+              style: imgStyle, 
+              className: 'after-image' 
+              }} 
+            />
+            
+            {/* Main Image */}
+            <MyImage image={{ 
+              src: reference.images[0].src, 
+              alt: 'Main Image', 
+              style: imgStyle, 
+              className: 'main-image' 
+              }} 
+            />
         </Box>
-        <Typography sx={{ fontSize: 20 }}>
-          {reference.title}
-        </Typography>
-        <Divider sx={{ width: '80%' }} />
-        <Typography >
-          {reference.description}
-        </Typography>
+
+        <Box>
+          <Typography sx={{ fontSize: 20 }}>
+            {reference.title}
+          </Typography>
+          <Divider sx={{ width: '100%' }} />
+        </Box>
+
       </Stack>
     </Link>
   )
