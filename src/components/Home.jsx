@@ -1,5 +1,8 @@
-import ImageGallery from './ImageGallery'
-import Footer from './Footer'
+import { lazy } from "react"
+
+const ImageGallery = lazy(() => import('./ImageGallery'));
+const Footer = lazy(() => import('./Footer'));
+
 import Typography from '@mui/material/Typography';
 import Motion from './motion/motion.jsx'
 import { useMediaQuery } from '@mui/material';

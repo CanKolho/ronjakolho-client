@@ -2,7 +2,7 @@ import '../styles/Footer.css'
 import { Link } from 'react-router-dom'
 import Motion from './motion/motion.jsx'
 
-const Footer2 = () => {
+const Footer = () => {
   const socials = [
     { name: 'linkedin', icon: 'fa-brands fa-linkedin' , anchor: 'https://fi.linkedin.com/in/ronjakolho' },
     { name: 'instagram', icon: 'fa-brands fa-instagram', anchor: 'https://www.instagram.com/ronjajjulia?igsh=MTQxYmpweHFsNXh3bw== ' }
@@ -50,4 +50,4 @@ const Footer2 = () => {
   )
 }
 
-export default Footer2
+export default Footer

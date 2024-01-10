@@ -51,7 +51,8 @@ const ReferencesBox = ({ reference }) => {
           <Box sx={imgContainerStyle}>
             {/* Before and After Images */}
             <MyImage image={{ 
-              src: reference.images[2].src, 
+              src: reference.images[2].src,
+              placeholderSrc: reference.images[2].placeholderSrc, 
               alt: 'Before Image', 
               style: imgStyle, 
               className: 'before-image' 
@@ -59,7 +60,8 @@ const ReferencesBox = ({ reference }) => {
 
             />
             <MyImage image={{ 
-              src: reference.images[1].src, 
+              src: reference.images[1].src,
+              placeholderSrc: reference.images[1].placeholderSrc,
               alt: 'After Image', 
               style: imgStyle, 
               className: 'after-image' 
@@ -68,7 +70,8 @@ const ReferencesBox = ({ reference }) => {
             
             {/* Main Image */}
             <MyImage image={{ 
-              src: reference.images[0].src, 
+              src: reference.images[0].src,
+              placeholderSrc: reference.images[0].placeholderSrc, 
               alt: 'Main Image', 
               style: imgStyle, 
               className: 'main-image' 

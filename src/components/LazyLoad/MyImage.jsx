@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+//import 'react-lazy-load-image-component/src/effects/blur.css';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 /**
  * Renders an image component with lazy loading.
@@ -20,7 +21,8 @@ const MyImage = ({ image, scrollPosition }) => {
       alt={image.alt}
       style={image.style}
       className={image.className}
-      effect="blur"
+      effect="opacity"
+      //effect="blur"
 
       placeholderSrc={image.placeholder}
 

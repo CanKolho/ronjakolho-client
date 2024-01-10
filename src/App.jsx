@@ -1,10 +1,13 @@
-import { useEffect } from "react"
+import { useEffect, Suspense, lazy } from "react"
+
 import Navigation from "./components/Navigation"
-import Home from "./components/Home"
-import About from "./components/About"
-import References from "./components/References"
-import Reference from "./components/Reference"
-import ContactForm from "./components/ContactForm"
+const Home = lazy(() => import('./components/Home'));
+const About = lazy(() => import('./components/About'));
+const References = lazy(() => import('./components/References'));
+const Reference = lazy(() => import('./components/Reference'));
+const ContactForm = lazy(() => import('./components/ContactForm'));
+import CircularLoading from './components/loading/CircularLoading.jsx'
+
 import { Routes, Route, useMatch } from 'react-router-dom'
 import { useScrollToTop } from "./hooks/index"
 import { portfolio } from "./portfolio"
@@ -36,13 +39,15 @@ const App = () => {
   return (
     <>
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<References />} />
-        <Route path='/portfolio/:id' element={<Reference reference={reference} />}/>
-        <Route path="/contact" element={<ContactForm />} />
-      </Routes>
+      <Suspense fallback={<CircularLoading />} >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<References />} />
+          <Route path='/portfolio/:id' element={<Reference reference={reference} />}/>
+          <Route path="/contact" element={<ContactForm />} />
+        </Routes>
+      </Suspense>
     </>
   )
 }

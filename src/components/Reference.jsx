@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -54,6 +55,7 @@ const Reference = ({ reference, scrollPosition }) => {
                 <MyImage 
                   image={{
                     src: image.src,
+                    placeholderSrc: image.placeholderSrc,
                     alt: image.alt,
                     style: { width: isMobile ? '80vw' : '20vw' }
                   }}
