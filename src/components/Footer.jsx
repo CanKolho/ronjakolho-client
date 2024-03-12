@@ -42,7 +42,7 @@ const Footer = () => {
       </Motion>
       <Motion>
         <p className="legal">
-        Website created by <a href='https://cankolho.github.io/CanKolho-Portfolio/'>Can Kolho</a> 
+        Website created by <a href='https://cankolho.github.io/Dev-Portfolio/'>Can Kolho</a> 
       </p>
       </Motion>
       
