@@ -13,7 +13,6 @@ const ImageGallery = () => {
   const isMobile = useMediaQuery('(max-width: 900px)')
 
   return (
-    <>
     <div className='gallery'>
         {data.map((item, index) => {
           return (
@@ -24,7 +23,6 @@ const ImageGallery = () => {
                 <MyImage image={{
                   src: item.imgSrc,
                   alt: item.altText,
-                  //placeholder: item.placeholderSrc,
                   style: { width: '100%' },
                   }}
                 />
@@ -33,7 +31,6 @@ const ImageGallery = () => {
           );
         })}
     </div>
-    </>
   )
 }
  
@@ -44,36 +41,30 @@ const data = [
       id: 1,
       imgSrc: img1,
       altText: 'Image 1',
-      //placeholderSrc: img1_ph
     },
     {
       id: 2,
       imgSrc: img2,
       altText: 'Image 2',
-      //placeholderSrc: img2_ph
     },
     {
       id: 3,
       imgSrc: img3,
       altText: 'Image 3',
-      //placeholderSrc: img3_ph
     },
     {
       id: 4,
       imgSrc: img4,
       altText: 'Image 4',
-      //placeholderSrc: img4_ph
     },
     {
       id: 5,
       imgSrc: img5,
       altText: 'Image 5',
-      //placeholderSrc: img5_ph
     },
     {
       id: 6,
       imgSrc: img6,
       altText: 'Image 6',
-      //placeholderSrc: img6_ph
     },
 ];
