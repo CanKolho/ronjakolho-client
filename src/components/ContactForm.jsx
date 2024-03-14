@@ -1,24 +1,21 @@
 import '../styles/ContactForm.css';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useField } from '../hooks';
 import { TextField, Button, Typography, Box } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Alert from '@mui/material/Alert';
 import FloatingPictures from './FloatingPictures';
-
 import Motion from './motion/motion.jsx'
-
 import emailService from '../services/email.js';
 
 const ContactForm = () => {
   const { reset: resetName, ...name } = useField('text')
   const { reset: resetEmail, ...email } = useField('email')
   const { reset: resetMessage, ...message } = useField('text')
-
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
 
     const emailObject = {
@@ -29,9 +26,7 @@ const ContactForm = () => {
 
     try {
       await emailService.sendEmail(emailObject)
-      
-      setSuccess(true)
-
+      setSuccess(true) 
       resetName();
       resetEmail();
       resetMessage();
@@ -44,7 +39,7 @@ const ContactForm = () => {
         setSuccess(false);
         setError(false);
       }, 7000);
-  };
+  }, []);
 
   return (
     <>

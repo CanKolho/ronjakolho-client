@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -14,7 +14,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
 import Motion from './motion/motion.jsx'
 import { Link } from 'react-router-dom'
 
@@ -25,9 +24,10 @@ const Navigation = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleDrawerToggle = () => {
+  // useCallback is used to memoize the function so that it doesn't get recreated on every render
+  const handleDrawerToggle = useCallback(() => {
     setMobileOpen((prevState) => !prevState);
-  };
+  }, []);
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>

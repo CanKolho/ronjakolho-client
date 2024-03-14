@@ -1,23 +1,23 @@
 import axios from "axios";
-//const baseUrl = import.meta.env.VITE_API_URL
 const baseUrl = 'https://photographyportfolio.onrender.com/api/email'
+// const localUrl = 'http://localhost:3001/api/email'
 
-/**
- * Connects to the server.
- */
+const api = axios.create({
+  baseURL: baseUrl,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
+// Connects to the server.
 const connect =  async () => {
-  const request = await axios.get(baseUrl);
+  const request = await api.get('/');
   return request.data;
 };
 
-
-/**
- * Sends an email.
- * @param {Object} email - The email object to be sent.
- * @returns {Promise} - A promise that resolves to the response data.
- */
+// Sends an email.
 const sendEmail = async (email) => {
-  const request = await axios.post(baseUrl, email);
+  const request = await api.post('/', email);
   return request.data;
 };
 

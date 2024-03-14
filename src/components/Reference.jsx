@@ -6,10 +6,8 @@ import Divider from '@mui/material/Divider';
 import { useMediaQuery } from '@mui/material';
 import Motion from './motion/motion.jsx'
 import { Link } from 'react-router-dom'
-
 import MyImage from './LazyLoad/MyImage';
 import { trackWindowScroll } from 'react-lazy-load-image-component';
-
 
 const Reference = ({ reference, scrollPosition }) => {
   const isMobile = useMediaQuery('(max-width: 900px)')

@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import { useMediaQuery } from '@mui/material';
@@ -7,6 +8,8 @@ import { portfolio } from '../portfolio.js'
 
 const References = () => {
   const isMobile = useMediaQuery('(max-width: 900px)')
+  // Reducing js execution time by using useMemo
+  const imagePortfolio = useMemo(() => portfolio, [])
 
   return (
     <Stack spacing={6.5} sx={{ 
@@ -26,7 +29,7 @@ const References = () => {
         gap: isMobile  ? '2rem' : '5rem',
         mx: isMobile ? 5 : 10,
         }}>
-        {portfolio.map((reference, index) => (
+        {imagePortfolio.map((reference, index) => (
           <Motion 
             key={index} 
             index={isMobile ? 0 : index} 

@@ -2,10 +2,9 @@ import { Box } from "@mui/material"
 import Typography from '@mui/material/Typography';
 import MyImage from './LazyLoad/MyImage.jsx'
 import img from '../assets/me.jpeg'
-import '../styles/About.css'
-
 import Motion from './motion/motion.jsx'
 import { useMediaQuery } from '@mui/material';
+import '../styles/About.css'
 
 const About = () => {
   const socials = [
@@ -13,7 +12,7 @@ const About = () => {
     { icon: 'fa-brands fa-instagram', anchor: 'https://www.instagram.com/ronjajjulia?igsh=MTQxYmpweHFsNXh3bw==' }
   ]
 
-    const isMobile = useMediaQuery('(max-width: 1100px)');
+  const isMobile = useMediaQuery('(max-width: 1100px)');
 
   return (
     <Motion direction='down'>

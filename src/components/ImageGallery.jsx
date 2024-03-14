@@ -4,20 +4,10 @@ import img3 from '../assets/drinks/moneypenny.jpg'
 import img4 from '../assets/weddings/IMG_9295.jpg'
 import img5 from '../assets/weddings/IMG_9352.jpg'
 import img6 from '../assets/drinks/mojito_1.jpg'
-
-//import img1_ph from '../assets/placeholders/IMG_9176_ph.jpg'
-//import img2_ph from '../assets/placeholders/IMG_9326-2_ph.jpg'
-//import img3_ph from '../assets/placeholders/moneypenny_ph.jpg'
-//import img4_ph from '../assets/placeholders/IMG_9295_ph.jpg'
-//import img5_ph from '../assets/placeholders/IMG_9352_ph.jpg'
-//import img6_ph from '../assets/placeholders/mojito_1_ph.jpg'
-
-import '../styles/ImageGallery.css'
-
 import MyImage from './LazyLoad/MyImage.jsx'
-
 import { useMediaQuery } from '@mui/material';
 import Motion from './motion/motion.jsx'
+import '../styles/ImageGallery.css'
 
 const ImageGallery = () => {
   const isMobile = useMediaQuery('(max-width: 900px)')
